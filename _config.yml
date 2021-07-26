@@ -30,7 +30,7 @@ twitter_username: jekyllrb
 github_username:  Biano-AI
 
 # Build settings
-theme: jekyll-theme-leap-day
+theme: minima
 plugins:
   - jekyll-feed
 
