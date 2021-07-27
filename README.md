@@ -12,7 +12,8 @@ docker run --rm \
     --volume="$(pwd):/srv/jekyll" \
     -p 127.0.0.1:8080:4000/tcp \
     -it \
-    jekyll/jekyll:latest jekyll serve --watch --force_polling --incremental --livereload
+    jekyll/jekyll:latest \ 
+    jekyll serve --watch --force_polling --incremental --livereload --disable-disk-cache
 ```
 
 Now open in a browser: [http://localhost:8080/]().
