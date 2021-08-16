@@ -108,6 +108,10 @@ If you need no failures and heavy load, you should definitely take Triton Infere
 The worst tested was TensorFlow Serving, but it has to be said that it is the model serving pioneer, and besides, no one uses TF Serving with REST API. From production experiences, we know that TF Serving is much faster with gRPC.
 Comparison of serving methods with gRPC interface will follow. 
 
+## Discussion
+
+You can discuss directly on Github on this page: [https://github.com/Biano-AI/biano-ai.github.io/discussions/3]().
+
 [ts-docs]: https://pytorch.org/serve/
 [tfserving-docs]: https://www.tensorflow.org/tfx/guide/serving
 [triton-docs]: https://developer.nvidia.com/nvidia-triton-inference-server
