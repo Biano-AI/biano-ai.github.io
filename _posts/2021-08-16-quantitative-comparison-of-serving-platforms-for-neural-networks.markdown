@@ -51,7 +51,7 @@ We designed the infrastructure within the AWS ecosystem. We tried to keep it as 
 
 obrazek infra
 
-We used the official pretrained ResNet-50 as a reference model. We believe that this model is well known and widely used, and it could be taken like the etalon of the image classification task. This model also has an official implementation in TensorFlow and Torch, respectively. Load testing was done by open-source tool k6.io, which allows parallel firing requests to target service and measures a pretty broad palette of metrics. Basic K6 setup is quite simple as it requires only two input parameters, measuring time and amount of Virtual Users (which is equal to request concurrency).
+We used the official pretrained ResNet-50 as a reference model. We believe that this model is well known and widely used, and it could be taken like the etalon of the image classification task. This model also has an official implementation in TensorFlow and Torch, respectively. Load testing was done by open-source tool [k6.io][k6-docs], which allows parallel firing requests to target service and measures a pretty broad palette of metrics. Basic K6 setup is quite simple as it requires only two input parameters, measuring time and amount of Virtual Users (which is equal to request concurrency).
 K6 was fed by a random subsample of 50k images from ImageNet LSVRC 2012 Validation Set (6.7GB) for testing. Our use case was to operate a model for a visual search engine. This task, from its nature, can’t fit input image batching (as there are seldom multiple requests that would come within a couple of milliseconds). So we decided to skip batching in measured metrics. All tests were done with batch size 1. The exact configuration of flags for individual servings is clear from the [docker-compose definition][scm-docker].
 
 Test scenario 1 : 
@@ -112,14 +112,6 @@ The worst tested was TensorFlow Serving, but it has to be said that it is the mo
 Comparison of serving methods with gRPC interface will follow. 
 
 
-## Some Other References
-
-- https://k6.io/docs/
-- https://www.tensorflow.org/tfx/guide/serving
-- https://pytorch.org/serve/
-- https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/index.html
-
-
 [ts-docs]: https://pytorch.org/serve/
 [tfserving-docs]: https://www.tensorflow.org/tfx/guide/serving
 [triton-docs]: https://developer.nvidia.com/nvidia-triton-inference-server
@@ -129,3 +121,4 @@ Comparison of serving methods with gRPC interface will follow.
 [triton-client]: https://github.com/triton-inference-server/client
 [aws-setup]: https://github.com/Biano-AI/serving-compare-middleware/blob/master/docs/AWS_SETUP.md
 [scm-docker]: https://github.com/Biano-AI/serving-compare-middleware/blob/master/docker-compose.test.yml
+[k6-docs]: https://k6.io/docs/
