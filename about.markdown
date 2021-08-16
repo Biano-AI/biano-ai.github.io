@@ -8,4 +8,4 @@ We are part of Biano ([https://www.biano.cz/](https://www.biano.cz/)) &ndash; th
 
 ## Contact us
 
-You can email us at [ai-research@biano.com](mailto:ai-research@biano.com) or start a thread at [https://github.com/Biano-AI/biano-ai.github.io/discussions]() .
+You can email us at [ai-research@biano.com](mailto:ai-research@biano.com) or start a thread at [https://github.com/Biano-AI/biano-ai.github.io/discussions](https://github.com/Biano-AI/biano-ai.github.io/discussions) .
