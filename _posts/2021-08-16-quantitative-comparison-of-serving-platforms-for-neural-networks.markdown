@@ -72,7 +72,7 @@ for all serving methods do
 
 ## Evaluation
 
-We chose the request rate and the response time as essential values for serving methods comparison. The first graph shows the dependence of the request rate on the number of virtual users for Torchserve, TensorFlow Serving, and Triton Inference Server with Torch model and TensorFlow Model. 
+We chose the request rate and the response time as essential values for serving methods comparison. The first graph shows the dependence of the request rate on the number of virtual users for Torchserve, TensorFlow Serving, and Triton Inference Server with Torch model and TensorFlow Model. Every measure was repeated five times and shown results are averages of medians from examined values.
 
 ![Request Rate](/assets/2021-08-16-serving-comparison/request_rate.png)
 
