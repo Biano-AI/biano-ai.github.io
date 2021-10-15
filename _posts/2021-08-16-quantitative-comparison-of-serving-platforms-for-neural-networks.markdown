@@ -111,7 +111,7 @@ Comparison of serving methods with gRPC interface will follow.
 
 ## Discussion
 
-You can discuss directly on Github on this page: [https://github.com/Biano-AI/biano-ai.github.io/discussions/3](https://github.com/Biano-AI/biano-ai.github.io/discussions/3).
+You can discuss directly on GitHub on this page: [https://github.com/Biano-AI/biano-ai.github.io/discussions/3](https://github.com/Biano-AI/biano-ai.github.io/discussions/3).
 
 [ts-docs]: https://pytorch.org/serve/
 [tfserving-docs]: https://www.tensorflow.org/tfx/guide/serving
