@@ -22,7 +22,11 @@
 title: Biano AI
 email: ai-research@biano.com
 description: >- # this means to ignore newlines until "baseurl:"
+<<<<<<< HEAD
   Technology blog of the AI team at Biano.cz
+=======
+  Technology blog of the AI team at Biano.cz.
+>>>>>>> 60ac9cffa9847b84e6bc0792fdffbcc38eeb9c86
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://biano-ai.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
