@@ -3,7 +3,7 @@ layout: post
 title:  "A Quantitative Comparison of Serving Platforms for Neural Networks, part 2"
 date:   2021-10-15 21:41:58 +0200
 categories: research
-excerpt: We have tested REST APIs of TensorFlow serving, TorchServe and NVIDIA Triton Inference server in the previous post. In this article we will look at gRPC APIs. We have measured and compared response time, request rate, and amount of failures depending on the load.
+excerpt: We have tested REST APIs of TensorFlow serving, TorchServe and NVIDIA Triton Inference server [in the previous post]({% post_url 2021-08-16-quantitative-comparison-of-serving-platforms-for-neural-networks %}). In this article we will look at gRPC APIs. We have measured and compared response time, request rate, and amount of failures depending on the load.
 ---
 We have tested REST APIs of TensorFlow serving, TorchServe and NVIDIA Triton Inference server in the previous post. In this article we will look at gRPC APIs. We have measured and compared response time, request rate, and amount of failures depending on the load.
 
