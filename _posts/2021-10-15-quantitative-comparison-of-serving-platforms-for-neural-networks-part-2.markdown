@@ -3,9 +3,10 @@ layout: post
 title:  "A Quantitative Comparison of Serving Platforms for Neural Networks, part 2"
 date:   2021-10-15 21:41:58 +0200
 categories: research
-excerpt: We tested REST APIs of TensorFlow serving, TorchServe, and NVIDIA Triton Inference server [in the previous post]({% post_url 2021-08-16-quantitative-comparison-of-serving-platforms-for-neural-networks %}). In this article, we will look at gRPC APIs. We measured and compared response time, request rate, and failure amount depending on the load.
+excerpt: We tested REST APIs of TensorFlow serving, TorchServe, and NVIDIA Triton Inference server in the previous post. In this article, we will look at gRPC APIs. We measured and compared response time, request rate, and failure amount depending on the load.
 ---
-In the previous post, we tested REST APIs of TensorFlow serving, TorchServe, and NVIDIA Triton Inference server. In this article, we will look at gRPC APIs. We measured and compared response time, request rate, and failure amount depending on the load.
+
+[In the previous post]({% post_url 2021-08-16-quantitative-comparison-of-serving-platforms-for-neural-networks %}), we tested REST APIs of TensorFlow serving, TorchServe, and NVIDIA Triton Inference server. In this article, we will look at gRPC APIs. We measured and compared response time, request rate, and failure amount depending on the load.
 
 ## gRPC
 The gRPC is RPC (Remote Procedure Call) initially created by Google. The basic idea of RPC API is very similar to REST API. The client sends a request to the RPC server with or without arguments, and the server does some action. Unlike the REST API, the called method is directly in the URL, where an endpoint does not necessarily contain a method name. The data are in Protocol Buffer (protobuf) format that is translated to binary data before transmission. Moreover, gRPC uses HTTP2, which speeds up communication even more. You can read more about gRPC in [official docs](https://grpc.io).
