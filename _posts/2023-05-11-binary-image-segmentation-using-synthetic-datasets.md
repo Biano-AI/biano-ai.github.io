@@ -1,3 +1,12 @@
+---
+layout: post
+title:  "Binary Image Segmentation Using Synthetic Datasets"
+date:   2023-10-15 21:41:58 +0200
+categories: research
+excerpt: In computer vision, one of the most common challenges is to remove the background from the foreground of an image. A popular solution to this problem is to use a semantic segmentation model to separate the foreground from the rest of the image. There are several general-purpose models available that can solve the binary segmentation problem, such as U-Net, Dichotomous Image Segmentation (DIS), Mask R-CNN, and Fully Convolutional Networks.
+---
+
+
 # Binary Image Segmentation Using Synthetic Datasets
 
 In computer vision, one of the most common challenges is to remove the background from the foreground of an image. A popular solution to this problem is to use a semantic segmentation model to separate the foreground from the rest of the image. There are several general-purpose models available that can solve the binary segmentation problem, such as U-Net, Dichotomous Image Segmentation (DIS), Mask R-CNN, and Fully Convolutional Networks.
