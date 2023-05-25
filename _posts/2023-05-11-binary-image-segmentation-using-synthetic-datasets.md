@@ -4,7 +4,7 @@ In computer vision, one of the most common challenges is to remove the backgroun
 
 However, in cases where you have a specific and unique domain, you may need to train your own model. The first step in doing so is to create a dataset. Traditionally, segmentation masks are created by hand using an image editor like GIMP. However, this process can be time-consuming and lead to a decrease in data quality.
 
-To address this issue, we trained a segmentation model using a synthetic dataset that is scalable, iterative, and can be generated automatically. We found that on our very specific domain, our model performed better than U2NET and DIS. Additionally, our model was fast to train and can be easily improved in the future by adding more data.
+To address this issue, we trained a segmentation model using a synthetic dataset that is scalable, iterative, and can be generated automatically. We found that on our very specific domain, our model performed better than [U<sup>2</sup>Net](https://github.com/xuebinqin/U-2-Net) and [DIS](https://github.com/xuebinqin/DIS). Additionally, our model was fast to train and can be easily improved in the future by adding more data.
 
 Overall, our work demonstrates the effectiveness of synthetic datasets for training segmentation models in unique domains, and highlights the importance of automating dataset creation to save time and improve data quality.
 
@@ -36,35 +36,42 @@ difficult.
 
 
 
-Up to now, we use a solution that incorporates the U2NET model since we also wanted from the model to determine the
+Up to now, we use a solution that incorporates the U<sup>2</sup>Net model since we also wanted from the model to determine the
 main object on the scene (such as in the case of the table with chairs scene). The model is impressive in many cases,
-
-<img alt="u2net good" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_good/26587239.jpg" width=300>
-<img alt="u2net good" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_good/26587239_u2net.jpg" width=300>
-<p></p>
-<img alt="u2net good" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_good/70761245.jpg" width=300>
-<img alt="u2net good" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_good/70761245_u2net.jpg" width=300>
-
+<table border="0"><tr>
+<td><img alt="u2net good" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_good/26587239.jpg" width=300></td>
+<td><img alt="u2net good" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_good/26587239_u2net.jpg" width=300></td>
+</tr>
+<tr>
+<td><img alt="u2net good" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_good/70761245.jpg" width=300></td>
+<td><img alt="u2net good" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_good/70761245_u2net.jpg" width=300></td>
+</tr>
+</table>
 However, it fails in many others,
+<table border="0">
+<tr>
+<td><img alt="u2net bad" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_fail/1613429.jpg" width=300></td>
+<td><img alt="u2net bad" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_fail/1613429_u2net.jpg" width=300></td>
+</tr><tr>
+<td><img alt="u2net bad" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_fail/53769699.jpg" width=300></td>
+<td><img alt="u2net bad" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_fail/53769699_u2net.jpg" width=300></td>
+</tr>
 
-<img alt="u2net bad" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_fail/1613429.jpg" width=300>
-<img alt="u2net bad" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_fail/1613429_u2net.jpg" width=300>
-<p></p>
-<img alt="u2net bad" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_fail/53769699.jpg" width=300>
-<img alt="u2net bad" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_fail/53769699_u2net.jpg" width=300>
-<p></p>
-<img alt="u2net bad" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_fail/59512867.jpg" width=300>
-<img alt="u2net bad" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_fail/59512867_u2net.jpg" width=300>
+<tr>
+<td><img alt="u2net bad" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_fail/59512867.jpg" width=300></td>
+<td><img alt="u2net bad" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_fail/59512867_u2net.jpg" width=300></td>
+</tr>
 
-<p></p>
+<tr>
+<td><img alt="u2net bad" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_fail/73594241.jpg" width=300></td>
+<td><img alt="u2net bad" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_fail/73594241_u2net.jpg" width=300></td>
+</tr>
 
-<img alt="u2net bad" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_fail/73594241.jpg" width=300>
-<img alt="u2net bad" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/u2net_fail/73594241_u2net.jpg" width=300>
-
-<p></p>
-
-<img alt="u2net bad" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/models/126216667.jpg" width=300>
-<img alt="u2net bad" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/models/126216667.jpg_u2net.jpg" width=300>
+<tr>
+<td><img alt="u2net bad" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/models/126216667.jpg" width=300></td>
+<td><img alt="u2net bad" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/models/126216667.jpg_u2net.jpg" width=300></td>
+</tr>
+</table>
 
 ## Creation of Synthetic Dataset
 
@@ -92,7 +99,7 @@ Let's dive into the process of creating a synthetic dataset. Although we will be
 
 Firstly, it is essential to get familiar with the dataset. In the Biano example, 85% of the data has a white background, while 15% of the data is in a scene or has a one-color background (which is rare). Some products have shadows, which can be of various shapes, depending on the direction of the light. Most of the time, the product is in the center of the image, and sometimes, it is in the golden-ratio position. Occasionally it is even shifted to the side and is no longer the dominant object in the image. There can be objects in front of the product, text with dimensions, or other information. Spending some hours or even days on this initial step is worth it.
 
-Next, we need to obtain some segmented images from our dataset to begin with. We made some samples of around 60,000 data and applied the models we had on hand. Then we asked annotators if any of the models segmented the product well. Since many of our products have a white background, we used some simple mathematical models to filter out white color and the U2NET as well.
+Next, we need to obtain some segmented images from our dataset to begin with. We made some samples of around 60,000 data and applied the models we had on hand. Then we asked annotators if any of the models segmented the product well. Since many of our products have a white background, we used some simple mathematical models to filter out white color and the U<sup>2</sup>Net as well.
 
 After that, we made some decisions on how to create the initial synthetic dataset. We decided that about 10% of our data would have a white background, 10% would have some empty rooms as the background, and 80% would have white noise as a background. We believed that white noise would be a good substitute for overcrowded images with multiple products. We deliberately sampled the background against the real distribution, as segmenting white-background images is much easier, so their representation is not as important.
 
@@ -101,17 +108,22 @@ many products have a shadow, we created shadows behind them, with shapes that ar
 product or an ellipse. The position and size of the shadows also vary. All these processes were decided randomly. 
 Due to 
 this variability, we were able to create multiple samples from one image (we tried up to 7 samples but did not test the limits). We also made sure that the whole product stayed inside the image.
+<table border="0">
+<tr>
+<td><img alt="white noise" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/images_with_masks_old/old_model.jpg" width=300></td>
+<td><img alt="white noise" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/images_with_masks_old/old_model_mask.jpg" width=300></td>
+</tr>
 
-<img alt="white noise" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/images_with_masks_old/old_model.jpg" width=300>
-<img alt="white noise" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/images_with_masks_old/old_model_mask.jpg" width=300>
-<p></p>
+<tr>
+<td><img alt="white bg" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/images_with_masks_old/old_model_2.jpg" width=300></td>
+<td><img alt="white bg" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/images_with_masks_old/old_model_2_mask.jpg" width=300></td>
+</tr>
 
-<img alt="white bg" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/images_with_masks_old/old_model_2.jpg" width=300>
-<img alt="white bg" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/images_with_masks_old/old_model_2_mask.jpg" width=300>
-<p></p>
-
-<img alt="empty rooms" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/images_with_masks_old/no_shadows_model.jpg" width=300>
-<img alt="empty rooms" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/images_with_masks_old/no_shadows_model_mask.jpg" width=300>
+<tr>
+<td><img alt="empty rooms" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/images_with_masks_old/no_shadows_model.jpg" width=300></td>
+<td><img alt="empty rooms" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/images_with_masks_old/no_shadows_model_mask.jpg" width=300></td>
+</tr>
+</table>
 
 
 ## Architecture
@@ -123,9 +135,7 @@ this architecture provided the best performance for our specific use case.
 ## Train, analyse, adjust, repeat
 ### White noise model
 
-Then train your first model and look where it fails. In our case, we found that the white noise background did not
-generalize well. The model learnt that foreground is that thing that is not a white noise. So we abandoned this
-approach completely. For further reference, we will call this model a "white noise model".
+Then train your first model and observe where it fails. In our case, we discovered that the white noise background did not generalize well. The model overfitted to the white noise. Consequently, we completely abandoned this approach. For future reference, we will refer to this model as the "white noise model".
 
 <img alt="white noise model" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/models/126216667.jpg" width=300 >
 <img alt="white noise model" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/models/126216667_white_noise.jpg" width=300 >
@@ -166,7 +176,7 @@ We picked up some random data (which were not in either of the train, validation
 inferred them with the synthetic rooms model and analysed where the model failed the most. We found that the worst 
 results are for sofas, armchairs, beds and similar items placed in a room.
 
-So we tried to add these data: we sampled the problematic categories, filtered out those data with white background, inferred them with U2NET and manually picked up those with a good U2NET mask. This gave us 2000 samples (around 5% of the original set).
+So we tried to add these data: we sampled the problematic categories, filtered out those data with white background, inferred them with U<sup>2</sup>Net and manually picked up those with a good U<sup>2</sup>Net mask. This gave us 2000 samples (around 5% of the original set).
 
 Additionally, we put some products with background from the Biano data within the empty rooms "canvases" serving as 
 backgrounds for the data.
@@ -197,7 +207,7 @@ the 700 pieces of data, around 500 could have been segmented using one of the mo
 experimental model), and we manually segmented 200 pieces in the GIMP image editor. Although the test set is small, the masks were of high quality. As a result, we were able to ensure that our models' predictions were accurate and of high quality.
 
 ## Results
-In this section, we will compare our last model with the U2NET and DIS models, where the latter is the state-of-the-art 
+In this section, we will compare our last model with the U<sup>2</sup>Net and DIS models, where the latter is the state-of-the-art 
 (SOTA) binary image segmentation model for difficult datasets.
 
 Visually, the results of the final model appeared better than DIS in many cases, but worse in others.
@@ -208,7 +218,7 @@ The mean accuracy of the compared models can be seen in the following figure:
 
 <img alt="final comparison" src="/assets/2023-05-11-binary-image-segmentation-using-synthetic-datasets/mean_accuracy.png" width=600>
 
-Our model has a significantly higher mean accuracy than the U2NET and DIS models, as well as a higher SSIM metric, indicating better performance on our specific domain.
+Our model has a significantly higher mean accuracy than the U<sup>2</sup>Net and DIS models, as well as a higher SSIM metric, indicating better performance on our specific domain.
 
 We also compared the performance of our model and DIS through manual annotations. We asked three annotators to select the masks that best segmented each image from our 700-piece test set. Each annotation was done three times, resulting in a total of 2100 annotations. We measured this metric in two ways:
 
@@ -233,3 +243,8 @@ other AI researchers and ML engineers who may be working on similar research.
 Finally, we presented our results, which we are very pleased with. Our model was able to outperform the SOTA model
 DIS on our specific dataset, resulting in a more streamlined, precise, and lightweight model for production. All
 of this was made possible through meticulous data handling.
+
+
+## Author
+
+[Barbora Planková](https://www.linkedin.com/in/barbora-plankov%C3%A1-4b823161/)
